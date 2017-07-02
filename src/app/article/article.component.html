@@ -1,0 +1,27 @@
+<div class="article">
+
+  <h3 class="article_title">
+    <a href="{{article.link}}">
+      {{article.title}} ({{article.domain()}})
+    </a>
+  </h3>
+
+  <div class="points">
+
+    <div class="points_element">
+      <button (click)="addPoint();">+</button>
+    </div>
+
+    <div class="points_element">
+      <span>
+        {{article.points}}
+      </span>
+    </div>
+
+    <div class="points_element">
+      <button (click)="minusPoint();">-</button>
+    </div>
+
+  </div>
+
+</div>

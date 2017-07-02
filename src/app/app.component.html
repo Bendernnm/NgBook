@@ -1,5 +1,35 @@
-<h1>
-  {{title}}
-</h1>
+<form class="add_form">
 
-<app-user-list></app-user-list>
+  <h3>Add a Link</h3>
+
+  <div class="fields">
+
+    <div class="field">
+      <label>
+        Title: <input type="text" name="title" #titleInput>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>
+        Link: <input type="text" name="link" #linkInput>
+      </label>
+    </div>
+
+    <div class="field">
+      <button class="save_btn"
+              (click)="addArticle(titleInput, linkInput);">
+        Save link
+      </button>
+    </div>
+
+  </div>
+
+</form>
+
+<div class="articles">
+  <app-article
+    *ngFor="let article of articles"
+    [article]="article">
+  </app-article>
+</div>
