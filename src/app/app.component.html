@@ -29,7 +29,7 @@
 
 <div class="articles">
   <app-article
-    *ngFor="let article of articles"
+    *ngFor="let article of sortedArticles()"
     [article]="article">
   </app-article>
 </div>

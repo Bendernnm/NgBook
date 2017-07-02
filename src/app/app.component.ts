@@ -31,7 +31,9 @@ export class AppComponent implements OnInit {
   }
 
   sortedArticles(): Array<Article> {
-    return this.articles.sort((article: Article) => article.points);
+    return this.articles.sort(
+      (firstArticle: Article, secondArticle: Article) => secondArticle.points - firstArticle.points
+    );
   }
 
 }
